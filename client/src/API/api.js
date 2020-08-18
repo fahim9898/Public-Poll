@@ -1,6 +1,11 @@
 import axios from 'axios';
-
-const url = "http://192.168.0.7:5555/api/posts";
+let url
+if(process.env.NODE_ENV === 'production'){
+     url = "api/posts";
+  }else{
+     url = "http://192.168.0.7:5555/api/posts";
+    
+}
 
 class Service {
   /* static async getData() {
