@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 app.use(corss());
 
 const posts = require('./routes/api/post')
+// const Poll = require('./routes/api/post')
 
 app.use('/api/posts', posts);
+app.use('/Poll/api/posts', posts);
 
 // Handel Production
 if(process.env.NODE_ENV === 'production'){

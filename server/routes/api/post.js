@@ -41,7 +41,8 @@ const router = express.Router()
     res.send(await post.find({_id: new mongodb.ObjectID(req.body.id)}).toArray());
  }); */
 
- router.post("/getObjectUsingId", (req, res) => {    
+ router.post("/getObjectUsingId", (req, res) => {
+    console.log("hellosdasdasdas")    
     loadDataFromMongodbPromisse()
       .then((collection) => {
         collection
