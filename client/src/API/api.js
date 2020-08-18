@@ -39,6 +39,7 @@ class Service {
   } */
 
   static getObjectUsingId(id) {
+    console.log(url)
     return new Promise((resolve, reject)=>{
         try{
             axios.post(url + "/getObjectUsingId", { id: id })
